@@ -2,7 +2,7 @@
 using namespace std;
 
 int main(){
-    int entrada=0, indice=0,saida = 1;
+    int entrada=0, posicao=0,saida = 1;
     cin >> entrada;
     int pulos[entrada];
     int casas[entrada];
@@ -15,8 +15,8 @@ int main(){
     
     for(int i=0;i<entrada;i++){
 
-        indice += pulos[i];
-        if(indice>= entrada){
+        posicao += pulos[i];
+        if(posicao>= entrada-1){
 
             cout << "true"<<endl;
             casas[entrada-1] = 1;
@@ -27,8 +27,11 @@ int main(){
             saida = 0;
             break;
         }
+        else if(posicao<0){
+            posicao = 0;
+        }
         else{
-            casas[indice] = 1;
+            casas[posicao] = 1;
         }
     }
     if(saida == 1){
