@@ -49,8 +49,5 @@ int main() {
     else{
         cout <<fixed<<setprecision(2)<< "Parabens Bruno!"<< endl<< kdbruno;
     }
-
-
-
     
 }
