@@ -7,9 +7,10 @@ using namespace std;
 struct Atleta {
     string nome;
     int peso;
+    string categoria;
 };
 
-bool compararPorPeso(const Atleta& a, const Atleta& b) {
+bool compararPorPeso(Atleta& a, Atleta& b) {
     return a.peso < b.peso;
 }
 
@@ -45,8 +46,9 @@ int main() {
 
     sort(atletas.begin(), atletas.end(), compararPorPeso);
 
-    for (const auto& atleta : atletas) {
-        cout << atleta.nome << " " << determinarCategoria(atleta.peso) << endl;
+    for (int i=0;i<n;i++) {
+        atletas[i].categoria = determinarCategoria(atletas[i].peso);
+        cout << atletas[i].nome << " " << atletas[i].categoria << endl;
     }
 
     return 0;
