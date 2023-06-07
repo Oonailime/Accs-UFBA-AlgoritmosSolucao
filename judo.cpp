@@ -6,7 +6,7 @@ using namespace std;
 
 struct Atleta {
     string nome;
-    int peso;
+    float peso;
     string categoria;
 };
 
@@ -14,7 +14,7 @@ bool compararPorPeso(Atleta& a, Atleta& b) {
     return a.peso < b.peso;
 }
 
-string determinarCategoria(int peso) {
+string determinarCategoria(float peso) {
     if (peso <= 44) {
         return "Super-ligeiro";
     } else if (peso <= 48) {
