@@ -30,7 +30,7 @@ int main()
 
     float dinheiro = 0;
 
-    for (size_t i = 0; i < entrada; i++)
+    for (int i = 0; i < entrada; i++)
     {
         cin >> sementes[i].nome >> sementes[i].preco >> sementes[i].renda >> sementes[i].qtd;
         sementes[i].custoBeneficio = (sementes[i].renda / sementes[i].preco) - 1;
@@ -53,7 +53,7 @@ int main()
 
     if (algumaSementeComprada)
     {
-        for (size_t i = entrada - 1; i >= 0; i--)
+        for (int i = entrada - 1; i >= 0; i--)
         {
             if (sementes[i].comprado > 0)
             {
