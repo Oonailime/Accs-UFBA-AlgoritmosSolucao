@@ -21,7 +21,7 @@ int main() {
     cartas.push("KO");
     cartas.push("KP");
 
-    cout << "tamanho da fila"<< catas.size()<<endl;
+    cout << "tamanho da fila"<< cartas.size()<<endl;
 
     cartas.pop();
 
